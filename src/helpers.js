@@ -29,7 +29,7 @@ helpers = {
     return [
       helpers.makeField(
         'link',
-        '<' + data.jiraUrl + '/browse/' + data.issue.key + '|' + encodeURI(data.issue.fields.summary) + '>',
+        '<' + data.jiraUrl + '/browse/' + data.issue.key + '|' + data.issue.fields.summary + '>',
         false
       ),
       helpers.makeField(
