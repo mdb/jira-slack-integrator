@@ -10,7 +10,12 @@ helpers = {
   },
 
   getIssueJson: function(body) {
-    var json = JSON.parse(body);
+    var json;
+
+    console.log('Attempting to parse jira response body: ');
+    console.log(body);
+
+    json = JSON.parse(body);
 
     return json.issues[0];
   },

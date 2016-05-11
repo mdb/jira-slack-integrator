@@ -16,23 +16,36 @@ app = Object.create({
 
     this.integrator = new Integrator({
       payload: function (req, callback) {
+        var issue,
+            payload = {
+              username: 'Jira',
+              channel: req.body.channel_id,
+              icon_emoji: ':ghost:',
+              text: ''
+            };
 
         request({
           url: artifactQueryUrl + req.body.text
         }, function (error, response, body) {
-          var issue = helpers.getIssueJson(body);
+          if (error) {
+            console.log(error);
 
-          callback({
-            username: 'Jira',
-            channel: req.body.channel_id,
-            icon_emoji: ':ghost:',
-            text: '',
-            attachments: [helpers.getAttachment({
+            payload.text = error.message;
+
+            callback(payload);
+          }
+
+          issue = helpers.getIssueJson(body);
+
+          payload.attachments = [
+            helpers.getAttachment({
               issue: issue,
               user: req.body.user_name,
               jiraUrl: jiraUrl
-            })]
-          });
+            })
+          ];
+
+          callback(payload);
         });
       },
 
