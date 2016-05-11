@@ -45,6 +45,9 @@ app = Object.create({
             })
           ];
 
+          console.log('posting to Slack:');
+          console.log(payload);
+
           callback(payload);
         });
       },
