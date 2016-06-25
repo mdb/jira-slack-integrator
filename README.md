@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mdb/jira-slack-integrator.svg?branch=master)](https://travis-ci.org/mdb/jira-slack-integrator)
+
 # jira-slack-integrator
 
 Query Jira ticket details from Slack!
