@@ -1,6 +1,6 @@
 {
   "name": "jira-slack-integrator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Slack integration for querying Jira",
   "main": "src/bot.js",
   "scripts": {
