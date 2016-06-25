@@ -7,9 +7,9 @@ Query Jira ticket details from Slack!
 ## Usage
 
 ```
-var jiraIntegrator = require('jira-slack-integrator');
+var JiraIntegrator = require('jira-slack-integrator');
 
-jiraIntegrator.integrate({
+new JiraIntegrator({
   // your Slack's token
   slackToken: '123', // defaults to $SLACK_TOKEN env var
 
