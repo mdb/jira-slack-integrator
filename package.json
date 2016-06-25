@@ -2,7 +2,7 @@
   "name": "jira-slack-integrator",
   "version": "0.0.1",
   "description": "A Slack integration for querying Jira",
-  "main": "src/app.js",
+  "main": "src/bot.js",
   "scripts": {
     "test": "node_modules/.bin/mocha"
   },
