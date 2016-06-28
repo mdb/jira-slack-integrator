@@ -1,6 +1,6 @@
-var Integrator = require('slack-integrator'),
-    request = require('request'),
-    helpers = require('./helpers');
+const Integrator = require('slack-integrator');
+const request = require('request');
+const helpers = require('./helpers');
 
 class Bot {
   constructor(config) {
